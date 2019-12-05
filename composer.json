@@ -1,0 +1,12 @@
+{
+    "name": "leonamdias/ecommerce",
+    "authors": [
+        {
+            "name": "Leonam Pereira Dias",
+            "email": "leonam.pd@gmail.com"
+        }
+    ],
+    "require": {
+        "pagarme/pagarme-php": "^4.0"
+    }
+}
