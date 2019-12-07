@@ -20,6 +20,7 @@
                         type="button"
                         class="btn btn-primary add-to-cart"
                         data-product-id="1"
+                        data-product-type="ebook"
                         data-product-name="Design Patterns: Elements of Reusable Object-Oriented Software"
                         data-product-description="Catálogo de soluções simples e sucintas para os problemas mais freqüentes na área de projeto, assinado por quatro profissionais com grande experiência em software orientado a objetos. Um best-seller mundial."
                         data-product-price="12.99">
@@ -41,7 +42,8 @@
                     <button
                         type="button"
                         class="btn btn-primary add-to-cart"
-                        data-product-id="1"
+                        data-product-id="2"
+                        data-product-type="físico"
                         data-product-name="Clean Code: A Handbook of Agile Software Craftsmanship"
                         data-product-description="Mesmo um código ruim pode funcionar. Mas se ele não for limpo, pode acabar com uma empresa de desenvolvimento. Perdem-se a cada ano horas incontáveis e recursos importantes devido a um código mal escrito. O especialista em software, Robert C. Martin, apresenta um paradigma com 'Código limpo - Habilidades Práticas do Agile Software.' Aprenda a ler códigos e descubra o que está correto e errado neles"
                         data-product-price="59.99">
@@ -65,7 +67,8 @@
                     <button
                         type="button"
                         class="btn btn-primary add-to-cart"
-                        data-product-id="1"
+                        data-product-id="3"
+                        data-product-type="ebook"
                         data-product-name="Refactoring: Improving the Design of Existing Code (2nd Edition)"
                         data-product-description=""Whenever you read [Refactoring], it’s time to read it again. And if you haven’t read it yet, please do before writing another line of code.""
                         data-product-price="99.99">
@@ -87,7 +90,8 @@
                     <button
                         type="button"
                         class="btn btn-primary add-to-cart"
-                        data-product-id="1"
+                        data-product-id="4"
+                        data-product-type="ebook"
                         data-product-name="Growing Object-Oriented Software, Guided by Tests"
                         data-product-description=""The authors of this book have led a revolution in the craft of programming by controlling the environment in which software grows.” --Ward Cunningham"
                         data-product-price="14.99">

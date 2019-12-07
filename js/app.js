@@ -23,6 +23,7 @@
       description: target.getAttribute('data-product-description'),
       quantity: target.previousElementSibling.value,
       price: target.getAttribute('data-product-price'),
+      type: target.getAttribute('data-product-type'),
     }
 
     cart.push(product)
@@ -45,28 +46,34 @@
     let name = document.createElement('input')
     name.setAttribute('type', 'hidden')
     name.setAttribute('value', product.name)
-    name.setAttribute('name', 'name[]')
+    name.setAttribute('name', 'nome[]')
 
     let price = document.createElement('input')
     price.setAttribute('type', 'hidden')
     price.setAttribute('value', product.price)
-    price.setAttribute('name', 'price[]')
+    price.setAttribute('name', 'preco[]')
 
     let quantity = document.createElement('input')
     quantity.setAttribute('type', 'hidden')
     quantity.setAttribute('value', product.quantity)
-    quantity.setAttribute('name', 'quantity[]')
+    quantity.setAttribute('name', 'quantidade[]')
 
     let description = document.createElement('input')
     description.setAttribute('type', 'hidden')
     description.setAttribute('value', product.description)
-    description.setAttribute('name', 'description[]')
+    description.setAttribute('name', 'descricao[]')
+
+    let type = document.createElement('input')
+    type.setAttribute('type', 'hidden')
+    type.setAttribute('value', product.type)
+    type.setAttribute('name', 'tipo[]')
 
     getElement('#carrinho').appendChild(id)
     getElement('#carrinho').appendChild(name)
     getElement('#carrinho').appendChild(price)
     getElement('#carrinho').appendChild(quantity)
     getElement('#carrinho').appendChild(description)
+    getElement('#carrinho').appendChild(type)
     getElement('#carrinho').submit();
   }
 
