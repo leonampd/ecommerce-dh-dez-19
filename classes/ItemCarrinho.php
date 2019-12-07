@@ -13,6 +13,16 @@ class ItemCarrinho
 
     public function calcularSubtotal(): float
     {
-        $this->livro->getValor() * $this->quantidade;
+        return $this->livro->getValor() * $this->quantidade;
+    }
+
+    public function getLivro(): Livro
+    {
+        return $this->livro;
+    }
+
+    public function getQuantidade(): int
+    {
+        return $this->quantidade;
     }
 }
