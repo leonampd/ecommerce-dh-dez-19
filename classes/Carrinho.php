@@ -18,4 +18,9 @@ class Carrinho
 
         return $total;
     }
+
+    public function getItensCarrinho(): array
+    {
+        return $this->itensCarrinho;
+    }
 }
