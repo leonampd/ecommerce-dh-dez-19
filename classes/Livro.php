@@ -1,6 +1,6 @@
 <?php
 
-class Livro
+abstract class Livro
 {
     private $titulo;
     private $valor;

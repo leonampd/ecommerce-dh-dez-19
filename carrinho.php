@@ -1,19 +1,34 @@
 <?php
     require("classes/Livro.php");
+    require("classes/Ebook.php");
+    require("classes/LivroFisico.php");
     require("classes/ItemCarrinho.php");
     require("classes/Carrinho.php");
-
-    $nomeProduto1 = $_POST['nome'][0];
-    $descricaoProduto1 = $_POST['descricao'][0];
-    $precoProduto1 = $_POST['preco'][0];
-    $quantidadeProduto1 = $_POST['quantidade'][0];
-
-    $livro1 = new Livro($nomeProduto1, $precoProduto1, $descricaoProduto1);
-    $itemCarrinho1 = new ItemCarrinho($livro1, $quantidadeProduto1);
+    require("classes/FabricaDeLivros.php");
 
     $carrinho = new Carrinho();
-    $carrinho->adicionarAoCarrinho($itemCarrinho1);
+    $quantidadeDeProdutosAdicionados = count($_POST['nome']);
 
+    for($i = 0; $i < $quantidadeDeProdutosAdicionados; $i++) {
+        $nomeProduto = $_POST['nome'][$i];
+        $descricaoProduto = $_POST['descricao'][$i];
+        $precoProduto = $_POST['preco'][$i];
+        $quantidadeProduto = $_POST['quantidade'][$i];
+        $tipoLivro = $_POST['tipo'][$i];
+
+        $fabricaDeLivros = new FabricaDeLivros();
+
+        $livro = $fabricaDeLivros->criarLivro(
+            $tipoLivro,
+            $nomeProduto,
+            $precoProduto,
+            $descricaoProduto
+        );
+
+        $itemCarrinho = new ItemCarrinho($livro, $quantidadeProduto);
+
+        $carrinho->adicionarAoCarrinho($itemCarrinho);
+    }
 ?>
 
 <?php include __DIR__ . '/templates/header.php'; ?>
